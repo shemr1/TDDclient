@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import emailjs from "emailjs-com";
+// import { useNavigate } from "react-router-dom";
+// import emailjs from "emailjs-com";
 import { useSearchParams } from "react-router-dom";
 
 function PaymentSuccess() {
@@ -15,7 +15,6 @@ function PaymentSuccess() {
 
   useEffect(() => {
     getCheckoutData();
-    console.log(data)
   }, []);
 
   const formatter = new Intl.NumberFormat('en-US', {

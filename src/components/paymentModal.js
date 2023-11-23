@@ -7,7 +7,7 @@ import { loadStripe } from '@stripe/stripe-js';
 
 export default function PaymentModal({ isOpen,togglePay, total }) {
   const { cartItems } = useContext(CartContext);
-  let lineItems = cartItems.map(item =>({["price"]: item.default_price.id, ["quantity"] : item.quantity }))
+  let lineItems = cartItems.map(item =>({"price": item.default_price.id, "quantity" : item.quantity }))
   console.log(lineItems);
   const makePayment = async () => { 
     const stripe = await loadStripe("pk_test_51NSlijEGkXT5HRVhKo6NaiFwOzTBNj2ZSfi0GEhKeBzQQk6gMcB0FRL1zBPfDEpDICZ6A2HguaTZXMhpl5IQXMCQ00FPXvTP71"); 
